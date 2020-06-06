@@ -6,18 +6,18 @@ import Login from '../../components/Login';
 
 import image from '../../assets/img/landing-page.svg';
 
-const Home = () => {
+const LandingPage = () => {
   return (
     <>
-      <div className="home-background">
-      <div className="home-header">
+      <div className="landing-background">
+      <div className="landing-header">
         <Header />
       </div>
-      <div className="home-content">
-        <div className="home-content__image">
+      <div className="landing-content">
+        <div className="landing-content__image">
           <img src={image} alt="duas pessoas transferindo dinheiro"/>
         </div>
-        <div className="home-content__user">
+        <div className="landing-content__user">
           <Login />
         </div>
       </div>
@@ -26,4 +26,4 @@ const Home = () => {
   )
 };
 
-export default Home;
+export default LandingPage;

@@ -1,4 +1,4 @@
-.home-background {
+.landing-background {
   background-color: #F0F0F5;
   width: 80vw;
   height: 90vh;
@@ -7,7 +7,7 @@
   border-radius: 10px;
 }
 
-.home-content {
+.landing-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -32,7 +32,7 @@
   }
 }
 
-.home-content__user {
+.landing-content__user {
   background-image: url('../../assets/img/background.svg');
   background-repeat: no-repeat;
   background-position: center;

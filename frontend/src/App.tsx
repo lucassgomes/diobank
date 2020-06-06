@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Home from './pages/Home/index';
+import LandingPage from './pages/LandingPage/index';
 
 import './App.scss';
 
 function App() {
   return (
-    <Home />
+    <LandingPage />
   )
 };
 
