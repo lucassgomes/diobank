@@ -6,7 +6,7 @@ import './styles.scss';
 interface Props {
   text: string,
   customClass: string,
-  handleClick:() => {},
+  handleClick: any,
 }
 
 const Button = (props: Props) => {

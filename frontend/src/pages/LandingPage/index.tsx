@@ -1,5 +1,5 @@
-import React from 'react';
-import { Container, Row, Col } from 'react-grid-system';
+import React, { useState, FormEvent } from 'react';
+import { Container, Col } from 'react-grid-system';
 import './styles.scss';
 
 import Header from '../../components/Header';
@@ -10,6 +10,17 @@ import Button from '../../components/Button';
 import image from '../../assets/img/landing-page.svg';
 
 const LandingPage = () => {
+  const [visible, setVisible] = useState(false);
+
+  const handleSignUp = (event: FormEvent) => {
+    event.preventDefault();
+     if (visible === false) {
+       setVisible(true)
+     } else {
+       setVisible(false)
+     }
+  }
+
   return (
     <Container>
       <div className="landing-background">
@@ -21,8 +32,24 @@ const LandingPage = () => {
           <img src={image} alt="duas pessoas transferindo dinheiro"/>
         </Col>
       <Col lg={6}  md={3} sm={5}className="landing-content__user">
-        <Button text="CADASTRAR"/>
-        <Login />
+
+        { visible ? ( 
+          <>
+          <Button 
+            text="TENHO CONTA"
+            handleClick={handleSignUp}
+          />
+          <SignUp />
+          </>
+          ) :
+          <>
+          <Button 
+            text="CADASTRAR"
+            handleClick={handleSignUp}
+          />
+          <Login />
+          </>
+          }
       </Col>
       </Col>
       </div>

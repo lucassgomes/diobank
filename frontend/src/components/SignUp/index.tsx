@@ -3,7 +3,7 @@ import React, { FormEvent} from 'react';
 import './styles.scss';
 
 const Login = () => {
-  const handleLogin = (event: FormEvent) => {
+  const handleClick = (event: FormEvent) => {
    event.preventDefault();
   }
 
@@ -31,7 +31,7 @@ const Login = () => {
           </div>
         </div>
       <div className="user-button">
-        <a href="/" onClick={handleLogin}>
+        <a href="/" onClick={handleClick}>
           <span></span>
           <span></span>
           <span></span>
