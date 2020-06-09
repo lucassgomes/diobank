@@ -21,6 +21,7 @@ const Resume = () => {
 
         <div className="recently">
           <div className="button">
+    
             <button type="submit">Enviar</button>
             <button type="submit">Exportar</button>
           </div>
