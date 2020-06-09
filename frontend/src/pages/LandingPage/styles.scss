@@ -1,0 +1,42 @@
+.landing-background {
+  background-color: #F0F0F5;
+  width: 80vw;
+  height: 90vh;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.landing-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: 768px){
+    flex-direction: column;
+  }
+
+  &__image {
+    margin: 0 auto;
+
+    img {
+      width: 600px;
+      height: 600px;
+
+      @media screen and (max-width: 768px){
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+}
+
+.landing-content__user {
+  background-image: url('../../assets/img/background.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+  background-size: cover;
+  margin: 0 auto;
+}
