@@ -1,29 +1,60 @@
-import React from 'react';
+import React, { useState, FormEvent } from 'react';
+import { Container, Col } from 'react-grid-system';
 import './styles.scss';
 
 import Header from '../../components/Header';
 import Login from '../../components/Login';
+import SignUp from '../../components/SignUp';
+import Button from '../../components/Button';
 
 import image from '../../assets/img/landing-page.svg';
 
 const LandingPage = () => {
+  const [visible, setVisible] = useState(false);
+
+  const handleSignUp = (event: FormEvent) => {
+    event.preventDefault();
+     if (visible === false) {
+       setVisible(true)
+     } else {
+       setVisible(false)
+     }
+  }
+
   return (
-    <>
+    <Container>
       <div className="landing-background">
-      <div className="landing-header">
-        <Header />
-      </div>
-      <div className="landing-content">
-        <div className="landing-content__image">
+        <Col lg={12} className="landing-header">
+          <Header />
+        </Col>
+      <Col lg={12} md={6} className="landing-content">
+        <Col lg={6} md={3} sm={5} className="landing-content__image">
           <img src={image} alt="duas pessoas transferindo dinheiro"/>
-        </div>
-        <div className="landing-content__user">
+        </Col>
+      <Col lg={6}  md={3} sm={5}className="landing-content__user">
+
+        { visible ? ( 
+          <>
+          <Button 
+            text="TENHO CONTA"
+            handleClick={handleSignUp}
+          />
+          <SignUp />
+          </>
+          ) :
+          <>
+          <Button 
+            text="CADASTRAR"
+            handleClick={handleSignUp}
+          />
           <Login />
-        </div>
+          </>
+          }
+      </Col>
+      </Col>
       </div>
-      </div>
-    </>
-  )
+    </Container>
+  );
 };
 
 export default LandingPage;

@@ -1,10 +1,21 @@
 .landing-background {
-  background-color: #F0F0F5;
-  width: 80vw;
-  height: 90vh;
+
+  background-color: #e1e1e9;
+  
+  background-image: url('https://www.solidbackgrounds.com/images/1920x1080/1920x1080-amber-orange-solid-color-background.jpg');
+  background-repeat: repeat-y;
+  background-size: 50% auto;
+  background-position: right;
+
+  width: 95%;
+  height: 90%;
   margin: 40px auto;
   padding: 30px;
   border-radius: 10px;
+
+  @media screen and (max-width: 425px) {
+    background-image: none;
+  }
 }
 
 .landing-content {
@@ -13,16 +24,17 @@
   justify-content: space-between;
   align-items: center;
 
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 425px){
     flex-direction: column;
   }
 
   &__image {
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 
     img {
-      width: 600px;
-      height: 600px;
+      width: 490px;
+      height: 490px;
 
       @media screen and (max-width: 768px){
         width: 300px;
@@ -33,10 +45,11 @@
 }
 
 .landing-content__user {
-  background-image: url('../../assets/img/background.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 10px;
-  background-size: cover;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .button {
+    margin-bottom: 20px;
+  }
 }
