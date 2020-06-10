@@ -1,5 +1,6 @@
 import React, { useState, FormEvent } from 'react';
 import { Container, Col } from 'react-grid-system';
+
 import './styles.scss';
 
 import Header from '../../components/Header';

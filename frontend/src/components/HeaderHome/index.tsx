@@ -1,7 +1,6 @@
 import React from 'react';
 import {FiBell} from 'react-icons/fi'
 
-
 import './styles.scss'
 import Logo from '../../assets/img/dio.png';
 
@@ -10,7 +9,7 @@ const HeaderHome = () => {
     <header>
     <div className="head">
       <img src={Logo} alt=""/>
-      <FiBell color={"#FCA024"} size={32} />
+      <FiBell className="bell" color={"#FCA024"} size={32} />
     </div>
   
       <nav className="site-nav">
@@ -20,10 +19,9 @@ const HeaderHome = () => {
           <li><a href="#0">Carteira</a></li>
           <li><a href="#0">Sair</a></li>
         </ul>
-    </nav>
-  
+    </nav>  
   </header>
-    )
+  )
 };
 
 export default HeaderHome;

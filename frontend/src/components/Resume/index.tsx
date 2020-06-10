@@ -4,9 +4,10 @@ import Logo from '../../assets/img/grafic.png';
 import './styles.scss';
 
 const Resume = () => {
+
   return (
     <>
-    <h2>Bem Vindo, Iglá Generoso!</h2>
+    <h2>Bem vindo, Iglá Generoso!</h2>
       <div className="box">
         <div className="box2">
         <div className="saldo">
@@ -20,8 +21,7 @@ const Resume = () => {
         </div>
 
         <div className="recently">
-          <div className="button">
-    
+          <div className="button">    
             <button type="submit">Enviar</button>
             <button type="submit">Exportar</button>
           </div>
