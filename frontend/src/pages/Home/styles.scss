@@ -1,0 +1,12 @@
+.landing-background {
+  background-color: #F0F0F5;
+  width: 80vw;
+  height: 130vh;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 10px;
+  
+  @media screen and (max-width: 768px){
+    height: 90vh;
+  }
+}
