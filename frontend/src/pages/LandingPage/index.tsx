@@ -27,11 +27,11 @@ const LandingPage = () => {
         <Col lg={12} className="landing-header">
           <Header />
         </Col>
-      <Col lg={12} md={6} className="landing-content">
-        <Col lg={6} md={3} sm={5} className="landing-content__image">
+      <Col className="landing-content">
+        <Col sm={5} className="landing-content__image">
           <img src={image} alt="duas pessoas transferindo dinheiro"/>
         </Col>
-      <Col lg={6}  md={3} sm={5}className="landing-content__user">
+      <Col sm={5}className="landing-content__user">
 
         { visible ? ( 
           <>

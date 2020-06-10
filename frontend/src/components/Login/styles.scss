@@ -19,6 +19,11 @@ body {
     height: 330px;
     padding: 30px;
   }
+  @media screen and (max-width: 320px) {
+    width: 250px!important;
+    height: 250px!important;
+    padding: 20px!important;
+  }
 }
 
 .login-box h2 {

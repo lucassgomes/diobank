@@ -27,10 +27,10 @@ const Login = () => {
           </div>
           <div className="user-box">
             <input type="password" name="" required/>
-            <label>Confirme a senha</label>
+            <label>Repita a senha</label>
           </div>
         </div>
-      <div className="user-button">
+      <div className="user-button-login">
         <a href="/" onClick={handleClick}>
           <span></span>
           <span></span>

@@ -16,13 +16,8 @@
   text-transform: uppercase;
   overflow: hidden;
   transition: .5s;
-  // margin-top: 40px;
   letter-spacing: 4px;
   text-align: center;
-
-  @media screen and (max-width: 768px){
-    width: 150px;
-  }
 }
 
 .button a:hover {
