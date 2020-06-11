@@ -1,0 +1,24 @@
+    {
+        "users": [
+            {
+                "id": 1,
+                "fullname": "Marty McFly",
+                "dateOfBirth": "2020-06-09T23:38:11+0000",
+                "email": "mcfly@bktime.com",
+                "password": "19851955",
+                "token": "0c7fdae7-241e-4e1e-9648-e228a7a3b911",
+                "address": "3793 Oakhurst Street, Hilldale, Hill Valley",
+                "frontDocumentPicture": "",
+                "backDocumentPicture": ""
+            }
+        ],
+        "accounts": [
+            {
+                "id": 1,
+                "userId": 1,
+                "bankCode": "001",
+                "accountBranch": "1111111",
+                "accountNumber": "1212121212"
+            }
+        ]
+    }
