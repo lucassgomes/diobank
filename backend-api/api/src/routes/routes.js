@@ -1,7 +1,10 @@
 import { Router } from 'express';
 import { CompressionTypes } from 'kafkajs'
+import axios from 'axios';
 import db from '../../../../db/db.json';
 import { v4 as uuidv4 } from 'uuid';
+/** Aqui estão os endereços para os serviços que serão consumidos */
+import conf from '../config/config';
 
 
 /** 
@@ -29,7 +32,6 @@ routes.get('/', async (req, res) => {
 });
 routes.post('/', async (req, res) => {
   const { email, password } = req.body;
-  const { users } = db;
     await req.producer.send({
         topic: 'issue-wallet',
         compression: CompressionTypes.GZIP,
@@ -48,14 +50,14 @@ routes.post('/', async (req, res) => {
         try{
           const { message } = args;
           const { email, password } = JSON.parse(String(message.value));
-          const [userFounded] = users.filter(user => user.email === email && user.password === password);
-          const token = uuidv4();
-          if (userFounded === 0 ) return res
+
+          const userFounded = await axios.post(`${conf.services.login}`, { email, password })
+          if (userFounded.status !== 200 ) return res
             .status(404).json({error: true, message: 'Usuário ou email inválido!'});
-          res.cookie('token', userFounded.token, { maxAge: 86400000, httpOnly: true });
+          res.cookie('token', userFounded.data.token, { maxAge: 86400000, httpOnly: true });
           return res.json({ 
+            ...userFounded.data, 
             success: true,
-            user: { ...userFounded }, 
           });
         } catch (error) {
           return `Erro: ${error}`;

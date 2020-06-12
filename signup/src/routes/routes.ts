@@ -31,6 +31,7 @@ routes.post('/signup', async (req:Request, res:Response) => {
 
 routes.post('/signin', async (req:Request, res:Response) => {
     try {
+        console.log('REquisicao -> ', req.body);
         const { email, password } = req.body;
         const responseUser = await signinInit({ email, password });
         const user:Signin = responseUser;
