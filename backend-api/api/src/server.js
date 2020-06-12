@@ -17,7 +17,7 @@ const kafka = new Kafka({
     brokers: ['localhost:9092'],
     retry: {
         initialRetryTime: 300,
-        retries: 10,
+        retries: 3,
     }
 })
 
@@ -27,7 +27,7 @@ const kafka = new Kafka({
 const producer = kafka.producer();
 const consumer = kafka.consumer({
     groupId: 'diobank-consumer',
-    topic: 'issue-wallet',
+    topic: 'dio-wallet',
     autoCommit: true,
     fetchMaxWaitMs: 1000,
     fetchMaxBytes: 1024 * 1024,

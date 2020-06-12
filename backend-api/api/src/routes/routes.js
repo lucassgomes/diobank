@@ -16,24 +16,77 @@ const routes = Router();
  * Cria as rotas
  */
 routes.get('/', async (req, res) => {
+  return res.status(401).json({message: 'Sem permissão para essa rota'})
+});
+
+routes.post('/signup', async (req, res) => {
+  const { email, password, fullname } = req.body;
+
+
+  const userCreated = await axios.post(`${conf.services.signup}`, { fullname, email, password });
+  if (userCreated.status === 201) {
+  const { token } = userCreated.data;
+  res.cookie('token', token, { maxAge: 86400000, httpOnly: true });
+  return res.json({ 
+    user: {
+      fullname,
+      email,
+      token,
+    }, 
+    success: true,
+  });
+  }
+  return res.status(400).json({ message: 'Ocorre um erro na geração do usuário!'})
+
+  
+  await req.producer.send({
+    topic: 'dio-wallet',
+    compression: CompressionTypes.GZIP,
+    messages: [
+      { value: JSON.stringify({
+        email,
+        fullname,
+        password
+      })}
+    ]
+  });
+  /**  
+   * Aqui vamos consumir o resultado do cadastro
+  */
   await req.consumer.subscribe({
-    topic: 'issue-wallet',
+    topic: 'dio-wallet',
   });
   await req.consumer.run({
     eachMessage: async (args) => {
       try{
         const { message } = args;
-        return res.json({ consumer: String(message.value)});
+        const { fullname, email, password } = JSON.parse(String(message.value));
+
+        const userCreated = await axios.post(`${conf.services.signup}`, { fullname, email, password });
+        if (userCreated.status === 201) {
+        const { token } = userCreated.data;
+        res.cookie('token', token, { maxAge: 86400000, httpOnly: true });
+        return res.json({ 
+          user: {
+            fullname,
+            email,
+          }, 
+          success: true,
+        });
+        }
+        return res.status(400).json({ message: 'Ocorre um erro na geração do usuário!'})
       } catch (error) {
-        return `Erro: ${error}`;  
+        return `Erro: ${error}`;
       }
     }
   });
-});
-routes.post('/', async (req, res) => {
+})
+
+
+routes.post('/login', async (req, res) => {
   const { email, password } = req.body;
     await req.producer.send({
-        topic: 'issue-wallet',
+        topic: 'dio-wallet',
         compression: CompressionTypes.GZIP,
         messages: [
             { value: JSON.stringify({
@@ -43,7 +96,7 @@ routes.post('/', async (req, res) => {
         ]
     });
     await req.consumer.subscribe({
-      topic: 'issue-wallet',
+      topic: 'dio-wallet',
     });
     await req.consumer.run({
       eachMessage: async (args) => {
