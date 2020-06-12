@@ -1,24 +1,77 @@
+{
+  "users": [
     {
-        "users": [
-            {
-                "id": 1,
-                "fullname": "Marty McFly",
-                "dateOfBirth": "2020-06-09T23:38:11+0000",
-                "email": "mcfly@bktime.com",
-                "password": "19851955",
-                "token": "0c7fdae7-241e-4e1e-9648-e228a7a3b911",
-                "address": "3793 Oakhurst Street, Hilldale, Hill Valley",
-                "frontDocumentPicture": "",
-                "backDocumentPicture": ""
-            }
-        ],
-        "accounts": [
-            {
-                "id": 1,
-                "userId": 1,
-                "bankCode": "001",
-                "accountBranch": "1111111",
-                "accountNumber": "1212121212"
-            }
-        ]
+      "id": 1,
+      "fullname": "Marty McFly",
+      "dateOfBirth": "2020-06-09T23:38:11+0000",
+      "email": "mcfly@bktime.com",
+      "password": "19851955",
+      "token": "0c7fdae7-241e-4e1e-9648-e228a7a3b911",
+      "address": "3793 Oakhurst Street, Hilldale, Hill Valley",
+      "frontDocumentPicture": "",
+      "backDocumentPicture": ""
+    },
+    {
+      "fullname": "Fred Flinstone",
+      "dateOfBirth": "0000-06-09T23:38:11+0000",
+      "email": "yabadabadoo@bedrock.com",
+      "password": "19851955",
+      "token": "5195b220-c344-45eb-a5cd-4bb257c0d6a8",
+      "address": "345 Cave Stone Road",
+      "frontDocumentPicture": "",
+      "backDocumentPicture": "",
+      "id": 2
+    },
+    {
+      "fullname": "Arthur Conan Doyle",
+      "email": "doyle@basil.co.uk",
+      "password": "elementar124",
+      "token": "d5260b4a-5619-468c-b3bd-eea1bd2b915b",
+      "id": 3
+    },
+    {
+      "fullname": "Arthur Conan Doyle2",
+      "email": "doyle@basil.co.uk",
+      "password": "elementar124",
+      "token": "432e741e-690e-4b85-a7c6-cef16ac0492e",
+      "id": 4
+    },
+    {
+      "fullname": "Arthur Conan Doyle3",
+      "email": "doyle@basil.co.uk",
+      "password": "elementar124",
+      "token": "747fe2b8-bc77-47b3-9fed-a553876f4f46",
+      "id": 5
+    },
+    {
+      "fullname": "Arthur Conan Doyle6",
+      "email": "doyle@basil.co.uk",
+      "password": "elementar124",
+      "token": "af1de433-040b-4545-a29f-1bfb0f56823d",
+      "id": 6
+    },
+    {
+      "fullname": "Arthur Conan Doyle7",
+      "email": "doyle@basil.co.uk",
+      "password": "elementar124",
+      "token": "9361de71-91a2-44d5-b85f-bae2804a2493",
+      "id": 7
+    },
+    {
+      "fullname": "Arthur Conan Doyle8",
+      "email": "doyle@basil.co.uk",
+      "password": "elementar124",
+      "token": "16f44708-3ca2-4983-8010-489f0ed8341e",
+      "id": 8
     }
+  ],
+  "accounts": [
+    {
+      "id": 1,
+      "userId": 1,
+      "bankCode": "001",
+      "accountBranch": "1111111",
+      "accountNumber": "1212121212"
+    }
+  ]
+}

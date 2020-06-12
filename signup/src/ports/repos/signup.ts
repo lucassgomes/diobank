@@ -1,55 +1,31 @@
-import Signup, { SignupStatus } from "@src/types/singup";
-import { Kafka, CompressionTypes } from 'kafkajs';
-import { v4 as uuidv4 } from 'uuid';
+import Signup, { SignupStatus } from "../../types/singup";
+import axios from 'axios';
+import signupComplete from "../../controllers/signup-complete";
 
-const kafka = new Kafka({
-  clientId: 'diobank-api',
-  brokers: ['localhost:9092'],
-  retry: {
-      initialRetryTime: 300,
-      retries: 10,
-  }
-})
+const endpoint:string = 'http://localhost:3000/api/users';
 
-const insert = async (_singup: Signup): Promise<void> => {
+const insert = async (_signup: Signup): Promise<void> => {
   try { 
-    const insertProducer = kafka.producer();
-    const insertConsumer = kafka.consumer({
-      groupId: 'diobank-consumer'
-  });
-  insertProducer.send({
-    topic: 'issue-wallet',
-    compression: CompressionTypes.GZIP,
-    messages: [
-      {
-        value: JSON.stringify({
-          ..._singup,
-          token: uuidv4(),
-        })
-      }
-    ]
-  })
-    const userSignin = new Promise((resolve, rejecjt) => {
-      resolve(insertProducer);
-    })
-    const userSignuped = new Promise((resolve, reject) => {
-      resolve(insertConsumer);
-    })
-    const singupResolved = Promise.all([userSignin, userSignuped]);
-    
-    console.log("Signup -> ", singupResolved);
+    const { fullname, email, password } = _signup.initParams;
+    const { token } = _signup;
+    await axios.post(endpoint, { fullname, email, password, token });
+    signupComplete(token);
   } catch (error) {
     console.log(error);
     return error;
   }
 };
 
-const updateStatus = async (_singup: Signup, _newStatus: SignupStatus): Promise<Signup> => {
-  throw new Error("Not implemented");
+const updateStatus = async (_signup: Signup, _newStatus: SignupStatus): Promise<Signup> => {
+  const user = { ..._signup, status: _newStatus }
+  return user;
 };
 
 const getByToken = async (_token: string): Promise<Signup> => {
-  throw new Error("Not implemented");
+  const query = await axios.get(`${endpoint}?token=${_token}`);
+  const [userByToken] = query.data; 
+  const user:Signup = userByToken;
+  return user;
 };
 
 export default {
