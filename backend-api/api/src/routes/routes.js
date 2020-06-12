@@ -19,11 +19,10 @@ routes.get('/', async (req, res) => {
   await req.consumer.run({
     eachMessage: async (args) => {
       try{
-        // console.info('Args -> ', args);
         const { message } = args;
         return res.json({ consumer: String(message.value)});
       } catch (error) {
-        return `Erro: ${error}`;
+        return `Erro: ${error}`;  
       }
     }
   });
