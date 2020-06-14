@@ -1,6 +1,6 @@
 import React, { FormEvent, useState, ChangeEvent} from 'react';
 import api from '../../services/api';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import './styles.scss';
 
 const Login = () => {
