@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../../assets/img/grafic.png';
 
 import './styles.scss';
@@ -7,21 +8,23 @@ const Resume = () => {
 
   return (
     <>
-    <h2>Bem vindo, Iglá Generoso!</h2>
+    <h2 className="user">Bem vindo, Iglá Generoso!</h2>
       <div className="box">
         <div className="box2">
         <div className="saldo">
           <p>Saldo Atual</p>
-          <p>R$ 1.200,00</p>
+          <p>R$ 20.000,00</p>
         </div>
 
         <div className="box3">
-          <img src={Logo} alt=""/>
+          <Link to="/">
+            <img src={Logo} alt=""/>
+          </Link>
         </div>
         </div>
 
         <div className="recently">
-          <div className="button">    
+          <div className="button1">    
             <button type="submit">Enviar</button>
             <button type="submit">Exportar</button>
           </div>

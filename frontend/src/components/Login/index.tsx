@@ -37,7 +37,11 @@ const Login = () => {
         <h2>Faça seu login</h2>
         <form>
           <div className="user-box">
+<<<<<<< HEAD
             <input type="email" name="email" onChange={handleInputChange} required />
+=======
+            <input type="text" name="" required />
+>>>>>>> f2bd5535308588e484d34f76b539ced05f5b926c
             <label>E-mail</label>
           </div>
       <div className="user-box">
@@ -45,13 +49,13 @@ const Login = () => {
         <label>Senha</label>
       </div>
       <div className="user-button">
-        <a href="/" onClick={handleLogin}>
+        <Link to="/home" onClick={handleLogin}>
           <span></span>
           <span></span>
           <span></span>
           <span></span>
-        ENTRAR
-      </a>
+          ENTRAR
+        </Link>
       </div>
       </form>
       </div>

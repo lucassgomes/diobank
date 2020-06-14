@@ -55,13 +55,13 @@ const Login = () => {
           </div>
         </div>
       <div className="user-button-login">
-        <a href="/" onClick={handleClick}>
+        <Link to="/home" onClick={handleClick}>
           <span></span>
           <span></span>
           <span></span>
           <span></span>
         CADASTRAR
-      </a>
+      </Link>
       </div>
       </form>
       </div>
