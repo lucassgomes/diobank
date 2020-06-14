@@ -4,6 +4,7 @@
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
+    "serve": "ts-node-dev --transpileOnly --ignore-watch node_modules src/index.ts",
     "test": "ts-mocha -r test-setup.ts './test/**/**.test.ts' --paths",
     "build": "sls package",
     "lint": "eslint 'src/**/*.ts' 'test/**/*.ts'",
@@ -11,6 +12,8 @@
     "ts:check": "tsc --noEmit"
   },
   "dependencies": {
+    "@types/kafkajs": "^1.9.0",
+    "kafkajs": "^1.12.0",
     "source-map-support": "^0.5.10",
     "uuidv4": "^6.0.6"
   },
@@ -42,6 +45,7 @@
     "ts-loader": "^5.3.3",
     "ts-mocha": "^6.0.0",
     "ts-node": "^8.6.2",
+    "ts-node-dev": "^1.0.0-pre.47",
     "tsconfig-paths-webpack-plugin": "^3.2.0",
     "typescript": "^3.9.3",
     "webpack": "^4.29.0",

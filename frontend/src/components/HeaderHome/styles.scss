@@ -9,6 +9,13 @@ img {
   height: 60px;
 }
 
+.bell {
+  cursor: pointer;
+}
+.bell:hover {
+  filter: blur(1px);
+}
+
 .site-nav {
   width: 60vw;
   padding: 20px;
@@ -42,7 +49,7 @@ a {
   text-transform: uppercase;
   text-decoration: none;
   color: #FCA024;
-  padding: 20px;
+  padding: 15px;
 
   @media screen and (max-width: 570px){
   padding: 10px;
@@ -53,7 +60,7 @@ a {
   a {
     font-weight: bold;
     color: #f0f0f5;
-    border-radius: 0 20px 0 20px;
+    border-radius: 10px;
     background: #FCA024;
   }
 }

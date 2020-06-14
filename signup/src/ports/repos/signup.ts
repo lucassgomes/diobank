@@ -1,4 +1,4 @@
-import Signup, { SignupStatus } from "@src/types/singup";
+import Signup, { SignupStatus } from "../../../src/types/singup";
 
 const insert = async (_singup: Signup): Promise<void> => {
   throw new Error("Not implemented");

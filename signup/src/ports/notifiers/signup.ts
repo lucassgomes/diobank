@@ -1,4 +1,4 @@
-import Signup from "@src/types/singup";
+import Signup from "../../../src/types/singup";
 
 const complete = async (_signup: Signup): Promise<void> => {};
 

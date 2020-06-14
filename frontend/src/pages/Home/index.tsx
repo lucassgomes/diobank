@@ -7,7 +7,7 @@ import Resume from '../../components/Resume';
 const Home = () => {
   return (
     <>
-      <div className="landing-background">
+      <div className="background">
         <HeaderHome />
         <Resume />
       </div>

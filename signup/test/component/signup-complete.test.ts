@@ -41,6 +41,8 @@ const signup: Signup = {
   token: "some-token",
   status: "IN_PROGRESS",
   initParams: {
+    email: "somebody@test.com",
+    password: "12345678",
     fullname: "Some Body",
     dateOfBirth: "1990-01-01",
     address: "Some place, 123"

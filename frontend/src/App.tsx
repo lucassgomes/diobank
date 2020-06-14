@@ -1,15 +1,13 @@
 import React from 'react';
-
-//import LandingPage from './pages/LandingPage/index';
-import Home from './pages/Home';
-
-
+import { BrowserRouter } from 'react-router-dom';
 import './App.scss';
+import Routes from './routes';
 
 function App() {
   return (
-    //<LandingPage />
-    <Home />
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
   )
 };
 

@@ -1,10 +1,34 @@
-import React, { FormEvent} from 'react';
-
+import React, { FormEvent, useState, ChangeEvent} from 'react';
+import api from '../../services/api';
+import { useHistory } from 'react-router-dom';
 import './styles.scss';
 
 const Login = () => {
-  const handleLogin = (event: FormEvent) => {
+
+  const history = useHistory();
+
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+  });
+
+  function handleInputChange(event: ChangeEvent<HTMLInputElement>) {
+    const { name, value } = event.target;
+
+    setFormData({ ...formData, [name]: value });
+  }
+
+  const handleLogin = async (event: FormEvent) => {
    event.preventDefault();
+   const data = {
+    ...formData,
+    address: 'Rua Francisco Souza Lima, 43, Dona Suzana, Florestal - MG',
+    dateOfBirth: '1999-03-21'
+  };
+   await api.post('signin', data);
+   setTimeout(() => {
+    history.push('/home');
+   }, 3000);
   }
 
   return (
@@ -13,21 +37,25 @@ const Login = () => {
         <h2>Faça seu login</h2>
         <form>
           <div className="user-box">
-            <input type="email" name="" required />
+<<<<<<< HEAD
+            <input type="email" name="email" onChange={handleInputChange} required />
+=======
+            <input type="text" name="" required />
+>>>>>>> f2bd5535308588e484d34f76b539ced05f5b926c
             <label>E-mail</label>
           </div>
       <div className="user-box">
-        <input type="password" name="" required/>
+        <input type="password" name="password" onChange={handleInputChange} required/>
         <label>Senha</label>
       </div>
       <div className="user-button">
-        <a href="/" onClick={handleLogin}>
+        <Link to="/home" onClick={handleLogin}>
           <span></span>
           <span></span>
           <span></span>
           <span></span>
-        ENTRAR
-      </a>
+          ENTRAR
+        </Link>
       </div>
       </form>
       </div>
