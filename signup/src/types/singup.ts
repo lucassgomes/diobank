@@ -1,4 +1,6 @@
 export interface SignupInitParams {
+  readonly email: string;
+  readonly password: string;
   readonly fullname: string;
   readonly dateOfBirth: string;
   readonly address: string;

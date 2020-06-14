@@ -1,6 +1,6 @@
-import Signup, { SignupInitParams } from "@src/types/singup";
+import Signup, { SignupInitParams } from "../../src/types/singup";
 import { uuid } from "uuidv4";
-import signupRepo from "@src/ports/repos/signup";
+// import signupRepo from "../../src/ports/repos/signup";
 
 export default async (signupInitParams: SignupInitParams): Promise<Signup> => {
   const signup: Signup = {
@@ -9,6 +9,6 @@ export default async (signupInitParams: SignupInitParams): Promise<Signup> => {
     status: "IN_PROGRESS"
   };
 
-  await signupRepo.insert(signup);
+  //await signupRepo.insert(signup);
   return signup;
 };

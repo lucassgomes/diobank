@@ -14,9 +14,14 @@ body {
   box-shadow: 0 15px 25px rgba(0,0,0,.4);
   border-radius: 10px;
 
+  @media screen and (max-width: 1024px){
+    width: 350px;
+    height: 400px;
+  }
+
   @media screen and (max-width: 768px){
     width: 300px;
-    height: 330px;
+    height: 330px!important;
     padding: 30px;
   }
 }
@@ -27,10 +32,6 @@ body {
   color: #fff;
   text-align: center;
 }
-
-// .login-box .user-box {
-//   position: relative;
-// }
 
 .login-box .user-box input {
   width: 100%;
@@ -44,9 +45,6 @@ body {
   background: transparent;
 }
 .login-box .user-box label {
-  // position: absolute;
-  // top:0;
-  // left: 0;
   padding: 10px 0;
   font-size: 16px;
   color: #fff;
@@ -66,10 +64,15 @@ body {
   font-size: 12px;
 }
 
-.user-button {
+.user-button-login {
   display: flex;
   flex-direction: row;
   justify-content: center;
+
+  @media screen and (max-width: 425px) {
+    margin-top: -55px;
+  }
+
 }
 
 .login-box form a {

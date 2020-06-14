@@ -1,8 +1,8 @@
 import { expect } from "chai";
-import { SignupInitParams } from "@src/types/singup";
-import signupInit from "@src/controllers/signup-init";
+import { SignupInitParams } from "../../src/types/singup";
+import signupInit from "../../src/controllers/signup-init";
 import { SinonStub, stub, restore } from "sinon";
-import signupRepo from "@src/ports/repos/signup";
+import signupRepo from "../../src/ports/repos/signup";
 
 let insertSignup: SinonStub;
 
@@ -34,6 +34,8 @@ describe("Signup initilization", () => {
 });
 
 const signupParams: SignupInitParams = {
+  email: "somebody@test.com",
+  password: "12345678",
   fullname: "Some Body",
   dateOfBirth: "1990-01-01",
   address: "av. Somestreet, 123"
