@@ -1,16 +1,11 @@
 import React from 'react';
-
-// import LandingPage from './pages/LandingPage';
-import Home from './pages/Home';
-
-
 import './App.scss';
+import Routes from './routes';
 
 function App() {
   return (
-    // <LandingPage />
-    <Home />
-  )
-};
+    <Routes />
+  );
+}
 
 export default App;
