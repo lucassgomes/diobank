@@ -1,15 +1,15 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
-// import LandingPage from './pages/LandingPage';
-import Home from './pages/Home';
-
+import Routes from './routes';
 
 import './App.scss';
 
 function App() {
   return (
-    // <LandingPage />
-    <Home />
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
   )
 };
 

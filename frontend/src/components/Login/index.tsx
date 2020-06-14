@@ -1,4 +1,5 @@
 import React, { FormEvent} from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles.scss';
 
@@ -13,7 +14,7 @@ const Login = () => {
         <h2>Faça seu login</h2>
         <form>
           <div className="user-box">
-            <input type="email" name="" required />
+            <input type="text" name="" required />
             <label>E-mail</label>
           </div>
       <div className="user-box">
@@ -21,13 +22,13 @@ const Login = () => {
         <label>Senha</label>
       </div>
       <div className="user-button">
-        <a href="/" onClick={handleLogin}>
+        <Link to="/home" onClick={handleLogin}>
           <span></span>
           <span></span>
           <span></span>
           <span></span>
-        ENTRAR
-      </a>
+          ENTRAR
+        </Link>
       </div>
       </form>
       </div>
