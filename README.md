@@ -31,8 +31,8 @@ A partir do projeto ["Construindo uma carteira digital com TypeScript"](https://
 - [Agile](agilemanifesto.org)
 
 ## Referências
-- [Microsserviços com gRPC](https://www.youtube.com/watch?v=FcZ00E5PLIE)
 - [Code Challenge: Micro-serviços com Node e Kafka](https://www.youtube.com/watch?v=-H8pD7sMcfo)
+- [Microsserviços com gRPC](https://www.youtube.com/watch?v=FcZ00E5PLIE)
 
 ## Contribuidores
 
