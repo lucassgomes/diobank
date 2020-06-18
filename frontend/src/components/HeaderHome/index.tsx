@@ -14,8 +14,9 @@ const HeaderHome = () => {
   
       <nav className="site-nav">
         <ul>
-          <li className="active"><a href="#0">Atividades</a></li>
-          <li><a href="#0">Pagamentos</a></li>
+          
+          <li><a href="#0">Atividades</a></li>
+          <li><a href="/pagamentos">Pagamentos</a></li>
           <li><a href="#0">Carteira</a></li>
           <li><a href="#0">Sair</a></li>
         </ul>
