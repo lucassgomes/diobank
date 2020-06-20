@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import LandingPage from './pages/LandingPage'
 import Pagamentos from './components/Pagamentos'
+import Perfil from './components/Perfil/perfil';
 
 export default function Routes() {
   return (
@@ -11,6 +12,7 @@ export default function Routes() {
       <Route path="/" exact component={LandingPage} />
       <Route path="/home" component={Home} />
       <Route path="/pagamentos" component={Pagamentos} />
+      <Route path="/perfil" component={Perfil} />
     </Switch>
   );
 }

@@ -8,16 +8,17 @@ const HeaderHome = () => {
   return (
     <header>
     <div className="head">
-      <img src={Logo} alt=""/>
+      <img src={Logo} className="dio" alt=""/>
       <FiBell className="bell" color={"#FCA024"} size={32} />
     </div>
   
       <nav className="site-nav">
         <ul>
           
-          <li><a href="#0">Atividades</a></li>
+          <li><a href="/home">Atividades</a></li>
           <li><a href="/pagamentos">Pagamentos</a></li>
           <li><a href="#0">Carteira</a></li>
+          <li><a href="/perfil">Perfil</a></li>
           <li><a href="#0">Sair</a></li>
         </ul>
     </nav>  
