@@ -237,3 +237,31 @@ img {
   position: relative;
   border-radius: 60px;
 }
+
+img {
+  max-width: 100%;
+  border-radius: 3px;
+}
+
+
+.btn-round {
+  border-width: 1px;
+  border-radius: 30px;
+  padding-right: 23px;
+  padding-left: 23px;
+}
+
+.btn-primary {
+  background-color: #51cbce;
+  color: #fff;
+  border-color: #51cbce;
+}
+
+.card .avatar {
+  // width: 30px;
+  // height: 30px;
+  margin-top: 5px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
