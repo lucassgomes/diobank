@@ -170,6 +170,18 @@ input {
   background: transparent;
 }
 
+select{
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  color:#495057;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  border: 1px solid  #ced4da;
+  outline: none;
+  background: transparent;
+}
+
 .background {
   background-color: #F0F0F5!important;
   width: 80vw;
@@ -236,4 +248,48 @@ img {
   border: 1px solid #fff;
   position: relative;
   border-radius: 60px;
+}
+
+.editar-foto{
+  text-align: center;
+  padding: 6px 10px;
+  margin: 12px 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #FCA024;
+  color: white;
+}
+
+.alterar-senha{
+  text-align: center;
+  padding: 6px 10px;
+  margin: 12px 10px;
+  border: 1px solid #FCA024;
+  border-radius: 10px;
+  color: #FCA024;
+  background-color: none;
+}
+
+.alterar-senha:hover{
+  background-color: #FCA024;
+  border: none;
+  color: white;
+}
+
+
+.atualizar{
+  text-align: center;
+  padding: 14px 35px;
+  margin: 12px 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #FCA024;
+  color: white;
+  font-size: 1em;
+}
+
+.atualizar:hover{
+  font-size: 1.5em;
+  background-color: #FCA024;
+  color: white;
 }
