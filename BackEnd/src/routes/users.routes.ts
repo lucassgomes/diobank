@@ -5,15 +5,11 @@ import CreateUsersServices from "../services/CreateUsersServices";
 const userRouter = Router();
 
 userRouter.post('/', async (request, response) => {
-  const { name, email, password } = request.body;
+  const data = request.body;
 
   const creatUser = new CreateUsersServices();
 
-  const user = await creatUser.execute({
-    name,
-    email,
-    password,
-  })
+  const user = await creatUser.execute(data)
 
   delete user.password;
 
