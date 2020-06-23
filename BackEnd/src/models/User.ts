@@ -15,7 +15,34 @@ class User {
   name: string;
 
   @Column()
+  surname: string;
+
+  @Column()
   email: string;
+
+  @Column()
+  phone: string;
+
+  @Column()
+  street: string;
+
+  @Column()
+  number: string;
+
+  @Column()
+  neighborhood: string;
+
+  @Column()
+  complement: string;
+
+  @Column()
+  city: string;
+
+  @Column()
+  state: string;
+
+  @Column()
+  zip: string;
 
   @Column()
   password: string;
