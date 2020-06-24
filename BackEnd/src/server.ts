@@ -3,7 +3,6 @@ import 'express-async-errors'
 import './database';
 
 import cors from 'cors';
-import routes from './routes/index';
 
 import express,{Response, Request, NextFunction} from 'express';
 import routes from './routes/index';
