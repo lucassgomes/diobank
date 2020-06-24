@@ -36,7 +36,7 @@ export class CreateProfile1592949656834 implements MigrationInterface {
           },
 
           {
-            name: "lagradouro",
+            name: "logradouro",
             type: "varchar",
           },
 
