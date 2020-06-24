@@ -20,7 +20,7 @@ class User {
   @Column()
   password: string;
 
-  @Column()
+  @CreateDateColumn()
   created_at: Date;
 
   @UpdateDateColumn()
