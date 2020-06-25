@@ -16,6 +16,9 @@ A partir do projeto ["Construindo uma carteira digital com TypeScript"](https://
 - [X] Inicializar desenvolvimento de frontend do SignUp/SignIn
 - [X] Inicializar desenvolvimento de frontend da Timeline
 - [ ] Explorar uso de banco de dados
+- [X] Tela de Perfil de Usuario
+- [X] Tela de Import de tabelas
+- [ ] Ajustar tela de Pagamentos
 - [ ] ...
 
 ## Tecnologias usadas nesse projeto projeto 💻
@@ -33,6 +36,7 @@ A partir do projeto ["Construindo uma carteira digital com TypeScript"](https://
 ## Referências
 - [Code Challenge: Micro-serviços com Node e Kafka](https://www.youtube.com/watch?v=-H8pD7sMcfo)
 - [Microsserviços com gRPC](https://www.youtube.com/watch?v=FcZ00E5PLIE)
+- [Paper Dashboards React](https://github.com/creativetimofficial/paper-dashboard-react)
 
 ## Contribuidores
 

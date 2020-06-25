@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.scss';
 
 import HeaderHome from '../../components/HeaderHome';
-import Resume from '../../components/Resume';
+import Resume from '../../pages/Resume';
 
 const Home = () => {
   return (

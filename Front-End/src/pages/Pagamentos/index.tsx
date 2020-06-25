@@ -3,12 +3,15 @@ import { Link } from 'react-router-dom';
 import Logo from '../../assets/img/grafic.png';
 
 import './styles.scss';
+import HeaderHome from '../../components/HeaderHome';
 
-const Resume = () => {
+const Pagamentos = () => {
 
   return (
     <>
-    <h2 className="user">Bem vindo, Iglá Generoso!</h2>
+    <div className="background">
+    <HeaderHome />
+    <h2 className="user"></h2>
       <div className="box">
         <div className="box2">
         <div className="saldo">
@@ -25,8 +28,8 @@ const Resume = () => {
 
         <div className="recently">
           <div className="button1">    
-            <button type="submit">Enviar</button>
-            <button type="submit">Exportar</button>
+            <button type="submit">inserir numero do boleto</button>
+            {/* <button type="submit">Exportar</button> */}
           </div>
 
           <div className="button2">
@@ -35,15 +38,13 @@ const Resume = () => {
         </div>
 
         <div className="transactions">
-          <div className="subTransactions">
-            <div className="historyTransactions">
-              <li>08/06</li>
-              <li>Fatura</li>
-            </div>
+          <div className="user-box">
+            <label>Numero da Conta</label>
+            <input type="number" name="numeroConta" required/>
+          </div>
 
             <div className="valueTrasactions">
               <li>- 900,00</li>
-            </div>
             </div>
             <hr/>
 
@@ -84,8 +85,9 @@ const Resume = () => {
             <hr/>
         </div>
       </div>
+      </div>
     </>
   );
 }
 
-export default Resume;
+export default Pagamentos;
