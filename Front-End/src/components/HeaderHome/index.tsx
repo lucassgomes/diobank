@@ -17,7 +17,7 @@ const HeaderHome = () => {
           
           <li><a href="/home">Atividades</a></li>
           <li><a href="/pagamentos">Pagamentos</a></li>
-          <li><a href="#0">Carteira</a></li>
+          <li><a href="/carteira">Carteira</a></li>
           <li><a href="/perfil">Perfil</a></li>
           <li><a href="#0">Sair</a></li>
         </ul>

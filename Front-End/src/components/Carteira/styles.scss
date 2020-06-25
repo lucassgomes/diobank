@@ -1,0 +1,108 @@
+
+.background {
+  background-color: #F0F0F5!important;
+  width: 80vw;
+  height: 170vh;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 10px;
+  
+  @media screen and (max-width: 768px){
+    height: 90vh;
+  }
+}
+
+.investimentos {
+  width: 25% !important;
+  box-shadow: 0 6px 10px -4px rgba(0,0,0,.15);
+  background-color: #fff;
+  color: #252422;
+  margin: 20px 20px 20px 20px;
+  position: relative;
+  border: 0;
+  transition: transform .3s cubic-bezier(.34,2,.6,1),box-shadow .2s ease;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: initial;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  text-align: center;
+}
+
+.textoCarteira{
+  color:#3a3a3a;
+}
+
+.precoInvestimento{
+  color:#2468fc;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.btndetalhesInvestimento{
+  text-align: center;
+  padding: 6px 10px;
+  margin: 12px 10px;
+  border: 1px solid #FCA024;
+  border-radius: 10px;
+  color: #FCA024;
+  background-color: none;
+}
+
+.btndetalhesInvestimento:hover{
+  background-color: #FCA024;
+  border: none;
+  color: white;
+}
+
+.detalhesInvestimento{
+  color:#3a3a3a;
+  font-size: 16px;
+  padding: 6px 10px;
+  margin: 12px 10px;
+}
+
+.detalhesInvestimento1{
+  color:#3a3a3a;
+  font-size: 16px;
+  padding: 6px 10px;
+  margin: 12px 10px;
+  font-weight: bold;
+
+}
+
+.rowInvestimento{
+  margin: 0 6px;
+  margin: 0 auto;
+}
+
+.detalhesInvestimentoValor{
+  color:#3a3a3a;
+  font-size: 16px;
+  padding: 6px 10px;
+  
+ margin: 12px 10px;
+ margin-left: 100px;
+}
+
+.detalhesInvestimentoValor1{
+  color:#3a3a3a;
+  font-size: 16px;
+  padding: 6px 10px;
+  
+ margin: 12px 10px;
+ margin-left: 30px;
+}
+
+.valorInvestir{
+  color: #2468fc;
+  font-weight: bold;
+  font-size: 18px;
+
+}
+
+.vencimentos{
+  font-style: italic;
+}

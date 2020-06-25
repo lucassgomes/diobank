@@ -5,7 +5,8 @@ import Home from './pages/Home';
 import LandingPage from './pages/LandingPage';
 import Pagamentos from './pages/Pagamentos';
 import Perfil from './pages/Perfil/perfil';
-import Import from './pages/Imports/index'
+import Import from './pages/Imports/index';
+import Carteira from './components/Carteira/carteira';
 
 export default function Routes() {
   return (
@@ -15,6 +16,8 @@ export default function Routes() {
       <Route path="/pagamentos" component={Pagamentos} />
       <Route path="/perfil" component={Perfil} />
       <Route path="/import" component={Import} />
+      <Route path="/carteira" component={Carteira} />
     </Switch>
   );
 }
+   
