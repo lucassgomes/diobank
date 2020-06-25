@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../../assets/img/grafic.png';
 
 import './styles.scss';
-import HeaderHome from '../HeaderHome';
+import HeaderHome from '../../components/HeaderHome';
 
 const Pagamentos = () => {
 
