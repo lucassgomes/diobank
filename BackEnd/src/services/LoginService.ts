@@ -4,7 +4,7 @@ import AppError from '../errors/AppError';
 import { compareSync } from 'bcryptjs';
 
 export interface Result {
-    msg: string | object;
+    data: any;
     code: number;
 }
 
@@ -18,14 +18,14 @@ class LoginService {
         });
 
         if (!user) {
-            return { msg: 'Email or Passord incorrect', code: 400 }
+            return { data: 'Email or Passord incorrect', code: 400 }
         }
 
         if (!compareSync(password, user.password)) {
-            return { msg: 'Email or Passord incorrect', code: 400 }
+            return { data: 'Email or Passord incorrect', code: 400 }
         }
 
-        return { msg: user, code: 200 };
+        return { data: user, code: 200 };
     }
 }
 export default LoginService;
