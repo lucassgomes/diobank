@@ -163,6 +163,18 @@ a{
   color: white;
 }
 
-a :hover{
+a:hover{
   color: white
+}
+
+.card-chart{
+  background: linear-gradient(90deg, #ffd147 0%, #ffae57 100%);
+}
+
+.card-title{
+  color: #343a40;
+}
+
+.boxprincipal{
+  margin-top: 50px;
 }

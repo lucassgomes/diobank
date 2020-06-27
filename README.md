@@ -40,7 +40,9 @@ A partir do projeto ["Construindo uma carteira digital com TypeScript"](https://
 
 ## Contribuidores
 
-<a href="https://github.com/hedenica"><img src="https://avatars2.githubusercontent.com/u/56850413?s=460&u=21eee89a16c2735be9ac25bdb956bde0a359a5f8&v=4" title="Hedênica Morais" width="80" height="80"></a>
-<a href="https://github.com/lucassgomes"><img src="https://avatars0.githubusercontent.com/u/29816632?s=460&u=ce45d796b68ec1f00f6c6cf4f2823f4584ae8387&v=4" title="Lucas Soares" width="80" height="80"></a>
-<a href="https://github.com/pablojr17"><img src="https://avatars2.githubusercontent.com/u/47211806?s=460&u=38f26b994d8a53b35eeb226ed16893d1a9b659f2&v=4" title="Pablo Gomes" width="80" height="80"></a>
-<a href="https://github.com/cataua"><img src="https://avatars3.githubusercontent.com/u/1001818?s=460&u=dff9ba7e89e000759f948178fdf30d644a1f92c8&v=4" title="Rogério Caetano" width="80" height="80"></a>
+<a href="https://github.com/NaeliSilva"><img src="https://avatars3.githubusercontent.com/u/60886998?s=460&u=40ed4a36a4085d9c845880ffe71a45004d2bbc88&v=4" title="Nae Silva
+" width="80" height="80"></a>
+<a href="https://github.com/danipishinin"><img src="https://avatars0.githubusercontent.com/u/36366490?s=460&u=cfad3c97cbc63aef7e64efa51c9baaef2b2726e9&v=4" title="Daniele Pishinin" width="80" height="80"></a>
+<a href="https://github.com/GiovanaNp1"><img src="https://avatars0.githubusercontent.com/u/34607779?s=460&u=714b98056d86138554532884b0d72de991bf895f&v=4" title="
+Giovana do Nascimento" width="80" height="80"></a>
+<a href="https://github.com/brenokf"><img src="https://avatars1.githubusercontent.com/u/20098859?s=460&u=6e642ddda180a50e5078b57bbbe4c52e810c1598&v=4" title="BRENO MELO MENDES" width="80" height="80"></a>
