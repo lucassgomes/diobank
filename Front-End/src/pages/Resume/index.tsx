@@ -1,9 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../../assets/img/grafic.png';
-
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  CardTitle,
+  Row,
+  Col,
+} from "reactstrap";
+import { Line } from "react-chartjs-2";
 import api from '../../services/api';
 import formatValue from '../../utils/formatValue';
+import {
+  dashboardNASDAQChart,
+} from "../../variables/charts.js";
 
 import './styles.scss';
 
@@ -56,32 +67,48 @@ const Resume: React.FC = () => {
   return (
     <>
     <h2 className="user">Bem vindo, Iglá Generoso!</h2>
-      <div className="box">
-        <div className="box2">
-        <div className="saldo">
-          <p>Saldo Atual</p>
-          <p>R$ 20.000,00</p>
-        </div>
-
-        <div className="box3">
-          <Link to="/">
-            <img src={Logo} alt=""/>
-          </Link>
-        </div>
-        </div>
-
-        <div className="recently">
-          <div className="button1">    
-            <button type="submit">Enviar</button>
-            <button type="submit"><Link to="/import">Importar</Link></button>
+      <div className="boxprincipal">
+        <Row className="ajustDashboard">
+        <Col md="6">
+              <Card className="card-chart">
+                <CardHeader>
+                  <CardTitle tag="h5">NASDAQ: AAPL</CardTitle>
+                  <p className="card-category">Line Chart with Points</p>
+                </CardHeader>
+                <CardBody>
+                  <Line
+                    data={dashboardNASDAQChart.data}
+                    options={dashboardNASDAQChart.options}
+                    width={400}
+                    height={100}
+                  />
+                </CardBody>
+                <CardFooter>
+                  <div className="chart-legend">
+                    <i className="fa fa-circle text-success" /> Tesla Model S{" "}
+                    <i className="fa fa-circle text-danger" /> BMW 5 Series
+                  </div>
+                  <hr />
+                  <div className="card-stats">
+                    <i className="fa fa-check" /> Data information certified
+                  </div>
+                </CardFooter>
+              </Card>
+            </Col>
+            <Col md="6">
+          <div className="box4">
+            <div className="teste">
+              <p>Saldo Atual - R$ 20.000,00</p>
+            </div>
           </div>
-
-          <div className="button2">
-            <button type="submit">...</button>
+          <div className="recently2">
+            <div className="button1">    
+              <button type="submit">Enviar</button>
+              <button type="submit"><Link to="/import">Importar</Link></button>
+              <button type="submit">...</button>
+            </div>
           </div>
-        </div>
-
-        <div className="transactions">
+          <div className="transactions">
         <table>
             <thead>
               <tr>
@@ -104,6 +131,8 @@ const Resume: React.FC = () => {
             </tbody>
           </table>
         </div>
+        </Col>
+        </Row>
       </div>
     </>
   );
