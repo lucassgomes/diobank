@@ -8,59 +8,10 @@
   margin-bottom: 20px;
 }
 
-.box {
-  width: 60vw;
-  height: 80vh;
-  padding: 20px;
-  margin:  0 auto;
-  top: 20px;
-  background: transparent;
-  border-radius: 10px;
-
-  @media screen and (max-width: 768px){
-    width: 300px;
-    height: 330px;
-    padding: 30px;
-  }
-}
-
-.box2 {
-  width: 40vw;
-  height: 20vh;
-  display: flex;
-  margin: 0 auto;
-  justify-content: space-between;
-  align-items: center;
-  background: transparent;
-  border-radius: 10px;
-
-  @media screen and (max-width: 768px){
-    width: 250px;
-    height: 50px;
-    flex-direction: column;
-  }
-}
-
-.box2 .saldo {
-  padding: 20px;
-
-  @media screen and (max-width: 768px){
-    padding: 5px;
-    height: 50px;
-   }
-}
-
-.box2 .saldo p {
+.box4 .teste p {
   font-size: 30px;
   margin-bottom: 10px;
   font-family: Ubuntu;
-
-  @media screen and (max-width: 768px){
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 5px;
-
-   }
 }
 
 
@@ -86,19 +37,8 @@
   }
 }
 
-.recently {
-  width: 40vw;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-
-  @media screen and (max-width: 768px){
-    width: 250px;
-  }
-}
-
-.recently button {
-  width: 90px;
+.recently2 button {
+  width: 150px;
   height: 40px;
   margin: 10px;
   font-size: 20px;
@@ -126,7 +66,7 @@ hr {
 }
 
 .transactions {
-  width: 40vw;
+  width: 150px;
   margin: 0 auto;
   margin-top: 20px;
   font-family: 'Ubuntu', sans-serif;
@@ -170,23 +110,25 @@ button {
 }
 
   table {
-    width: 100%;
+    width: 90%;
     border-spacing: 0 8px;
 
     th {
       color: #969cb3;
       font-weight: normal;
-      padding: 20px 32px;
+      padding: 20px 20px;
       text-align: left;
       font-size: 16px;
       line-height: 24px;
     }
 
     td {
-      padding: 20px 32px;
+      padding: 20px 20px;
       border: 0;
+      text-align: center;
       background: #fff;
       font-size: 16px;
+      text-align: center;
       font-weight: normal;
       color: #969cb3;
 
@@ -210,4 +152,29 @@ button {
     td:last-child {
       border-radius: 0 8px 8px 0;
   }
+}
+
+.ajustDashboard{
+  display: flex;
+  justify-content: space-around;
+}
+
+a{
+  color: white;
+}
+
+a:hover{
+  color: white
+}
+
+.card-chart{
+  background: linear-gradient(90deg, #ffd147 0%, #ffae57 100%);
+}
+
+.card-title{
+  color: #343a40;
+}
+
+.boxprincipal{
+  margin-top: 50px;
 }
