@@ -1,0 +1,195 @@
+.user h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 30px;
+  width: 60vw;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.box {
+  width: 60vw;
+  height: 80vh;
+  padding: 20px;
+  margin:  0 auto;
+  top: 20px;
+  background: transparent;
+  border-radius: 10px;
+
+  @media screen and (max-width: 768px){
+    width: 300px;
+    height: 330px;
+    padding: 30px;
+  }
+}
+
+.box2 {
+  width: 40vw;
+  height: 20vh;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border-radius: 10px;
+
+  @media screen and (max-width: 768px){
+    width: 250px;
+    height: 50px;
+    flex-direction: column;
+  }
+}
+
+.box2 .saldo {
+  padding: 20px;
+
+  @media screen and (max-width: 768px){
+    padding: 5px;
+    height: 50px;
+   }
+}
+
+.box2 .saldo p {
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-family: Ubuntu;
+
+  @media screen and (max-width: 768px){
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+
+   }
+}
+
+
+.box3 {
+  padding: 10px;
+  display: flex;
+
+  @media screen and (max-width: 768px){
+    width: 250px;
+    height: 280px;
+    padding: 20px;
+}
+}
+
+.box3 img {
+  margin-right: 20px;
+  width: 8vw;
+  display: flex;
+  height: 20vh;
+
+  @media screen and (max-width: 768px){
+    display: none;
+  }
+}
+
+.recently {
+  width: 40vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: 768px){
+    width: 250px;
+  }
+}
+
+.recently button {
+  width: 270px;
+  height: 40px;
+  margin: 10px;
+  font-size: 20px;
+  border-radius: 8px;
+  background: #FCA024;
+  outline: none;
+  border: none;
+  color: #FFFF;
+
+  @media screen and (max-width: 824px){
+    width: 60px;
+    height: 25px;
+    margin: 5px;
+    font-size: 12px;
+  }
+}
+
+hr {
+  border-color:#fcd424;
+  box-sizing:border-box;
+  width:100%;
+  height: 1px;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.transactions {
+  width: 40vw;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-family: 'Ubuntu', sans-serif;
+
+  @media screen and (max-width: 768px){
+    width: 250px;
+  }
+}
+
+.subTransactions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.historyTransactions {
+  display: flex;
+}
+
+.transactions li {
+  list-style: none;
+  padding: 10px;
+  color: rgba(34, 25, 6, 0.767);
+  font-size: 20px;
+
+  @media screen and (max-width: 768px){
+    padding: 4px;
+    font-size: 16px;
+  }
+}
+
+.valueTrasactions li {
+  margin-left: 18px;
+  }
+
+li:last-child {
+  margin-left: 0px;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color:#3a3a3a;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  border: 1px solid #3a3a3a;
+  outline: none;
+  background: transparent;
+}
+
+.background {
+  background-color: #F0F0F5!important;
+  width: 80vw;
+  height: 130vh;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 10px;
+  
+  @media screen and (max-width: 768px){
+    height: 90vh;
+  }
+}

@@ -1,0 +1,180 @@
+.user h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 30px;
+  width: 60vw;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.box4 .teste p {
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-family: Ubuntu;
+}
+
+
+.box3 {
+  padding: 10px;
+  display: flex;
+
+  @media screen and (max-width: 768px){
+    width: 250px;
+    height: 280px;
+    padding: 20px;
+}
+}
+
+.box3 img {
+  margin-right: 20px;
+  width: 8vw;
+  display: flex;
+  height: 20vh;
+
+  @media screen and (max-width: 768px){
+    display: none;
+  }
+}
+
+.recently2 button {
+  width: 150px;
+  height: 40px;
+  margin: 10px;
+  font-size: 20px;
+  border-radius: 8px;
+  background: #FCA024;
+  outline: none;
+  border: none;
+  color: #FFFF;
+
+  @media screen and (max-width: 824px){
+    width: 60px;
+    height: 25px;
+    margin: 5px;
+    font-size: 12px;
+  }
+}
+
+hr {
+  border-color:#fcd424;
+  box-sizing:border-box;
+  width:100%;
+  height: 1px;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.transactions {
+  width: 150px;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-family: 'Ubuntu', sans-serif;
+
+  @media screen and (max-width: 768px){
+    width: 250px;
+  }
+}
+
+.subTransactions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.historyTransactions {
+  display: flex;
+}
+
+.transactions li {
+  list-style: none;
+  padding: 10px;
+  color: rgba(34, 25, 6, 0.767);
+  font-size: 20px;
+
+  @media screen and (max-width: 768px){
+    padding: 4px;
+    font-size: 16px;
+  }
+}
+
+.valueTrasactions li {
+  margin-left: 18px;
+  }
+
+li:last-child {
+  margin-left: 0px;
+}
+
+button {
+  cursor: pointer;
+}
+
+  table {
+    width: 90%;
+    border-spacing: 0 8px;
+
+    th {
+      color: #969cb3;
+      font-weight: normal;
+      padding: 20px 20px;
+      text-align: left;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    td {
+      padding: 20px 20px;
+      border: 0;
+      text-align: center;
+      background: #fff;
+      font-size: 16px;
+      text-align: center;
+      font-weight: normal;
+      color: #969cb3;
+
+      &.title {
+        color: #363f5f;
+      }
+
+      &.income {
+        color: #12a454;
+      }
+
+      &.outcome {
+        color: #e83f5b;
+      }
+    }
+
+    td:first-child {
+      border-radius: 8px 0 0 8px;
+    }
+
+    td:last-child {
+      border-radius: 0 8px 8px 0;
+  }
+}
+
+.ajustDashboard{
+  display: flex;
+  justify-content: space-around;
+}
+
+a{
+  color: white;
+}
+
+a:hover{
+  color: white
+}
+
+.card-chart{
+  background: linear-gradient(90deg, #ffd147 0%, #ffae57 100%);
+}
+
+.card-title{
+  color: #343a40;
+}
+
+.boxprincipal{
+  margin-top: 50px;
+}

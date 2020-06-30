@@ -1,0 +1,67 @@
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head .dio{
+  width: 60px;
+  height: 60px;
+}
+
+.bell {
+  cursor: pointer;
+}
+.bell:hover {
+  filter: blur(1px);
+}
+
+.site-nav {
+  width: 60vw;
+  padding: 20px;
+  margin:  0 auto;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: 768px){
+    width: 50vh;
+
+}
+  
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  padding: 0;
+
+}
+
+li {
+  font-size: 14px;
+  font-weight: bold;
+
+  @media screen and (max-width: 570px){
+    font-size: 14px;
+}
+}
+
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FCA024;
+  padding: 15px;
+
+  @media screen and (max-width: 570px){
+  padding: 10px;
+}
+  
+}
+.active {
+  a {
+    font-weight: bold;
+    color: #f0f0f5;
+    border-radius: 10px;
+    background: #FCA024;
+  }
+}
+}
